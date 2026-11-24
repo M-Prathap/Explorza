@@ -43,3 +43,63 @@ searchInput.addEventListener("keydown", (event) => {
     }
 
 });
+
+
+/* =========================
+   ADVENTURES GRID PAGE
+========================= */
+
+// Get selected city from URL
+const params = new URLSearchParams(window.location.search);
+const selectedCity = params.get("city");
+const cityTitle = document.getElementById("cityTitle");
+
+if (cityTitle) {
+    if (selectedCity) {
+        cityTitle.textContent = `Explore Adventures in ${selectedCity}`;
+    } else {
+        cityTitle.textContent = "All Destinations";
+    }
+}
+
+
+// Adventure category filtering
+const categoryFilter = document.getElementById("categoryFilter");
+
+if (categoryFilter) {
+
+    const adventureItems = document.querySelectorAll(".adventure-item");
+
+    const emptyMessage = document.getElementById("emptyMessage");
+
+    categoryFilter.addEventListener("change", function () {
+
+        const selectedCategory = this.value;
+
+        let visibleCount = 0;
+
+        adventureItems.forEach((item) => {
+
+            const category = item.dataset.category;
+
+            if (
+                selectedCategory === "all" ||
+                category === selectedCategory
+            ) {
+
+                item.style.display = "";
+                visibleCount++;
+
+            } else {
+
+                item.style.display = "none";
+
+            }
+
+        });
+
+        emptyMessage.hidden = visibleCount !== 0;
+
+    });
+
+}

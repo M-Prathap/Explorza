@@ -386,6 +386,228 @@ body {
     font-size: 11px;
 }
 
+.destination-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+
+
+/* =========================
+   ADVENTURES GRID PAGE
+========================= */
+
+.adventure-header {
+    background: var(--primary);
+    color: white;
+    padding: 75px 0;
+}
+
+.adventure-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 45px;
+    margin: 15px 0;
+}
+
+.adventure-header p {
+    color: #C5CDD5;
+    font-size: 15px;
+}
+
+.adventures-section {
+    padding: 70px 0 100px;
+}
+
+.adventures-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    color: var(--primary);
+}
+
+.category-filter {
+    max-width: 220px;
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+.adventure-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 100%;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.adventure-card:hover {
+    transform: translateY(-6px);
+}
+
+.adventure-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.adventure-card-content {
+    padding: 22px;
+}
+
+.adventure-category {
+    color: #A77B35;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+}
+
+.adventure-card-content h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+    color: var(--primary);
+    margin-top: 12px;
+}
+
+.adventure-card-content p {
+    color: var(--muted);
+    font-size: 13px;
+    margin: 12px 0 20px;
+}
+
+.adventure-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #eee;
+}
+
+.adventure-meta strong {
+    color: var(--primary);
+    font-size: 17px;
+}
+
+.details-button {
+    display: block;
+    margin-top: 18px;
+    padding: 12px;
+    text-align: center;
+    background: var(--primary);
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.details-button:hover {
+    background: var(--gold);
+    color: var(--primary);
+}
+
+
+
+/* Adventure Details Page */
+
+.details-section {
+    padding: 60px 0;
+    min-height: 75vh;
+    background: #f8fafc;
+}
+
+.back-link {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.details-image {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.details-title {
+    font-size: 36px;
+    font-weight: 700;
+    margin: 15px 0;
+    color: #172033;
+}
+
+.details-section p {
+    color: #64748b;
+    line-height: 1.8;
+}
+
+.details-info {
+    display: flex;
+    gap: 40px;
+    margin: 30px 0;
+}
+
+.details-info div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.details-info span {
+    color: #64748b;
+    font-size: 14px;
+}
+
+.details-info strong {
+    font-size: 18px;
+    color: #172033;
+}
+
+.booking-card {
+    padding: 25px;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.07);
+}
+
+.booking-card h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.booking-card label {
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.booking-card .btn {
+    background: #2563eb;
+    border: none;
+    padding: 12px;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+
+    .details-section {
+        padding: 35px 0;
+    }
+
+    .details-image {
+        height: 280px;
+    }
+
+    .details-title {
+        font-size: 28px;
+    }
+
+    .details-info {
+        gap: 25px;
+    }
+
+}
+
+
 
 /* =========================
    RESPONSIVE DESIGN
@@ -456,6 +678,17 @@ body {
     .footer a:not(.footer-logo) {
         margin-left: 0;
         margin-right: 15px;
+    }
+     .adventure-header {
+        padding: 55px 0;
+    }
+
+    .adventure-header h1 {
+        font-size: 34px;
+    }
+
+    .adventures-section {
+        padding: 45px 0 65px;
     }
 
 }
