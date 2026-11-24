@@ -511,9 +511,38 @@ body {
 /* Adventure Details Page */
 
 .details-section {
-    padding: 60px 0;
-    min-height: 75vh;
+    padding: 35px 0 70px;
     background: #f8fafc;
+}
+
+.details-breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.details-breadcrumb a {
+    text-decoration: none;
+    color: #2563eb;
+}
+
+.details-heading {
+    margin-bottom: 25px;
+}
+
+.details-heading h1 {
+    font-size: 36px;
+    font-weight: 750;
+    color: #172033;
+    margin: 12px 0;
+}
+
+.details-heading p {
+    color: #64748b;
+    margin-bottom: 0;
 }
 
 .back-link {
@@ -587,6 +616,249 @@ body {
     font-weight: 600;
 }
 
+/* Image Gallery */
+
+.adventure-gallery {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 15px;
+    height: 420px;
+}
+
+.gallery-main img,
+.gallery-side img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 14px;
+}
+
+.gallery-side {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 15px;
+    min-height: 0;
+}
+
+
+/* Content */
+
+.details-content {
+    margin-bottom: 40px;
+}
+
+.details-content h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #172033;
+}
+
+.details-content p {
+    color: #64748b;
+    line-height: 1.8;
+}
+
+
+/* Highlights */
+
+.highlight-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 18px;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    height: 100%;
+}
+
+.highlight-card > span {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eff6ff;
+    color: #2563eb;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.highlight-card div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.highlight-card small {
+    color: #64748b;
+}
+
+.highlight-card strong {
+    color: #172033;
+    font-size: 15px;
+}
+
+
+/* Included / Excluded */
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+}
+
+.feature-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    color: #475569;
+}
+
+.included-list li span {
+    color: #16a34a;
+    font-weight: bold;
+}
+
+.excluded-list li span {
+    color: #dc2626;
+    font-weight: bold;
+}
+
+
+/* Reviews */
+
+.review-card {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+.review-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.review-top strong {
+    color: #172033;
+}
+
+.review-top span {
+    color: #f59e0b;
+    letter-spacing: 2px;
+}
+
+.review-card p {
+    margin: 0;
+}
+
+
+/* Booking Sidebar */
+
+.booking-card {
+    position: sticky;
+    top: 25px;
+    padding: 25px;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+}
+
+.booking-label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #64748b;
+    letter-spacing: 1px;
+}
+
+.booking-card h2 {
+    font-size: 32px;
+    font-weight: 750;
+    margin: 8px 0 0;
+    color: #172033;
+}
+
+.booking-card > p {
+    color: #64748b;
+    font-size: 14px;
+}
+
+.booking-card label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #334155;
+}
+
+.booking-card .form-control {
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.booking-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 22px 0;
+    color: #172033;
+}
+
+.booking-total strong {
+    font-size: 20px;
+}
+
+.booking-button {
+    width: 100%;
+    padding: 14px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 9px;
+    font-weight: 650;
+    transition: 0.3s;
+}
+
+.booking-button:hover {
+    background: #1d4ed8;
+}
+
+.booking-message {
+    font-size: 13px;
+    margin-top: 12px;
+    color: #dc2626;
+}
+
+.booking-note {
+    text-align: center;
+    margin: 15px 0 0;
+    font-size: 12px;
+}
+
+
+/* Responsive */
+
+
+@media (max-width: 480px) {
+
+    .details-section {
+        padding-top: 25px;
+    }
+
+    .gallery-main {
+        height: 220px;
+    }
+
+    .booking-card {
+        padding: 20px;
+    }
+
+}
+
 @media (max-width: 768px) {
 
     .details-section {
@@ -605,13 +877,30 @@ body {
         gap: 25px;
     }
 
+     .details-heading h1 {
+        font-size: 28px;
+    }
+
+    .adventure-gallery {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+
+    .gallery-main {
+        height: 280px;
+    }
+
+    .gallery-side {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 130px;
+    }
+
+    .details-content h2 {
+        font-size: 21px;
+    }
+
 }
 
-
-
-/* =========================
-   RESPONSIVE DESIGN
-========================= */
 
 @media (max-width: 991px) {
 
@@ -626,6 +915,9 @@ body {
 
     .hero-section {
         min-height: 550px;
+    }
+    .booking-card {
+        position: static;
     }
 
 }
